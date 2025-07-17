@@ -51,15 +51,6 @@ Access JupyterLab at `http://localhost:8888`
 - **SAGA**: Compiled from source with cmake
 - **Python Environment**: Conda environment named 'pygile'
 
-## Processing Pipeline
-
-The container implements a complete DEM processing workflow:
-
-1. **Initialization**: QGIS + SAGA NextGen provider setup
-2. **Resampling**: Convert DEM to specified resolution (default 50m)
-3. **Preprocessing**: Fill sinks and depressions
-4. **Analysis**: Calculate slope, aspect, and other terrain metrics
-5. **Visualization**: Generate publication-ready plots
 
 ## Configuration
 
@@ -73,20 +64,6 @@ The container automatically configures:
 - `QT_QPA_PLATFORM=offscreen` for headless operation
 - `QGIS_PREFIX_PATH` pointing to conda environment
 - Processing provider paths
-
-## Use Cases
-
-### Research Applications
-- **Hydrology**: Watershed delineation, flow analysis
-- **Geomorphology**: Terrain characterization, landform classification
-- **Environmental Modeling**: Habitat analysis, erosion modeling
-
-### Operational Workflows
-- Automated DEM processing pipelines
-- Batch terrain analysis
-- Cloud-based geospatial processing
-
-## Technical Details
 
 ### Plugin Integration
 The container solves the challenge of using SAGA NextGen in headless environments by:
@@ -103,8 +80,6 @@ The container solves the challenge of using SAGA NextGen in headless environment
 
 ### Common Issues
 1. **"Application path not initialized"**: Normal warning, doesn't affect functionality
-2. **Algorithm not found**: Plugin uses automatic algorithm discovery
-3. **Memory issues**: Reduce DEM resolution or increase container memory
 
 ### Verification
 ```python
