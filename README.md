@@ -9,7 +9,6 @@ This Docker container provides a complete headless geospatial processing environ
 - **SAGA GIS** compiled from source
 - **SAGA NextGen Provider Plugin** for seamless integration
 - **JupyterLab** for interactive analysis
-- Pre-configured processing pipeline for DEM analysis
 
 ## Features
 
