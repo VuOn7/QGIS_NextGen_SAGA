@@ -20,12 +20,6 @@ This Docker container provides a complete headless geospatial processing environ
 - **JupyterLab** environment on port 8888
 - **Headless operation** suitable for server deployments
 
-### Processing Capabilities
-- DEM resampling and preprocessing
-- Hydrological analysis (sink filling, flow direction)
-- Terrain analysis (slope, aspect, curvature)
-- 589 SAGA algorithms accessible through QGIS Processing
-- Automated visualization and result export
 
 ## Quick Start
 
@@ -41,18 +35,6 @@ docker run -p 8888:8888 -v $(pwd)/data:/workspace qgis-saga-nextgen
 
 Access JupyterLab at `http://localhost:8888`
 
-### Basic Usage Example
-```python
-# Initialize QGIS and SAGA
-qgs, processing, registry = initialize_qgis_saga()
-
-# Process DEM
-input_dem = '/workspace/your_dem.tif'
-results = process_dem(processing, algorithms, input_dem, '/workspace/output')
-
-# Visualize results
-visualize_results(results)
-```
 
 ## Container Architecture
 
